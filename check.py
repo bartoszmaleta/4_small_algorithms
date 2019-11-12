@@ -100,3 +100,51 @@ def get_sum_of_all_even_elements(my_list):
 # sum_of_all_even_elements = get_sum_of_all_even_elements(my_list)
 # print(sum_of_all_even_elements)
 # ---------------------------------------------------------------
+
+
+def get_letters_statistics(word):
+    """
+    Function should return a dictionary where keys are letters and coresponding values are quantities of that letters.
+
+    >>> result = get_letters_statistics('abc')
+    >>> result == {'a': 1, 'b': 1, 'c': 1}
+    True
+
+    >>> result2 = get_letters_statistics('abrakadabra')
+    >>> result2 == {'a': 5, 'b': 2, 'r': 2, 'k': 1, 'd': 1}
+    True
+
+    """
+    # word = sorted(word)
+
+    # VERSION WITH LIST AND DICTIONARY
+    # letters_list = []
+    # for letter in word:
+    #     letters_list.append(letter)
+    
+    # dict_of_letters = {}
+    # for elem in letters_list:
+    #     if elem in dict_of_letters:
+    #         dict_of_letters[elem] += 1
+    #     else:
+    #         dict_of_letters[elem] = 1
+
+    # return dict_of_letters
+
+    # VERSION WITH JUST DICTIONARY
+    dict_of_letter_frequency = {} 
+  
+    for letter in word: 
+        if letter in dict_of_letter_frequency: 
+            dict_of_letter_frequency[letter] += 1
+        else: 
+            dict_of_letter_frequency[letter] = 1
+    # print(all_freq)
+    return dict_of_letter_frequency
+
+
+# EXERCISE 4
+# word = 'abc'
+# letters_statistic = get_letters_statistics('abrakadabra')
+# print(letters_statistic)
+# ---------------------------------------------------------------
