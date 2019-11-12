@@ -1,3 +1,5 @@
+import timeit
+
 
 def get_common_elements(first_list, second_list):
     """
@@ -148,3 +150,13 @@ def get_letters_statistics(word):
 # letters_statistic = get_letters_statistics('abrakadabra')
 # print(letters_statistic)
 # ---------------------------------------------------------------
+
+start = timeit.default_timer()
+
+letters_statistic2 = get_letters_statistics('abc')
+print(letters_statistic2)
+
+stop = timeit.default_timer()
+execution_time = stop - start
+
+print("Program Executed in ", execution_time)  # It returns time in sec
