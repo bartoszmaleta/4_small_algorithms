@@ -73,3 +73,30 @@ def get_odd_elements(x, start):
 # odd_numbers_doctest_final = get_odd_elements(4, list_with_numbers)
 # print(odd_numbers_doctest_final)
 # ---------------------------------------------------------------
+
+
+def get_sum_of_all_even_elements(my_list):
+    """
+    Function should sum all it's even elements and return it as an integer.
+
+    >>> get_sum_of_all_even_elements([1, 15, 21])
+    0
+
+    >>> get_sum_of_all_even_elements([1, 2, 3, 6, 9, 11])
+    8
+
+    """
+    sum_of_list_of_all_even_elemnts = 0
+    list_of_all_even_elements = []
+    for elem in my_list:
+        if elem % 2 == 0:
+            list_of_all_even_elements.append(elem)
+    sum_of_list_of_all_even_elemnts = sum(list_of_all_even_elements)
+    return sum_of_list_of_all_even_elemnts     
+
+
+# EXERCISE 3
+# my_list = [1, 6, 3, 7, 0, 11, 10, 13, 15]
+# sum_of_all_even_elements = get_sum_of_all_even_elements(my_list)
+# print(sum_of_all_even_elements)
+# ---------------------------------------------------------------
